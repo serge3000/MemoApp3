@@ -1,0 +1,53 @@
+// eslint-disable-next-line no-unused-vars
+import React from 'react';
+import {
+  View, ScrollView, Text, StyleSheet,
+} from 'react-native';
+
+import AppBar from '../components/AppBar';
+import CircleButton from '../components/CircleButton';
+
+export default function MemoDetailScreen() {
+  return (
+    <View style={styles.container}>
+      <AppBar />
+      <View style={styles.memoHeader}>
+        <Text style={styles.memoTitle}>買い物リスト</Text>
+        <Text style={styles.memoDate}>2022年7月7日 20:44</Text>
+      </View>
+      <ScrollView>
+        <Text>
+          買い物リスト
+          これはテストです七夕なので、願いを書きます。
+          自分も含めてみんな笑顔で健康に、お金をたくさん稼げますように。
+        </Text>
+      </ScrollView>
+      <CircleButton>+</CircleButton>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#ffffff',
+  },
+  memoHeader: {
+    backgroundColor: '#467FD3',
+    height: 96,
+    justifyContent: 'center',
+    paddingVertical: 24,
+    paddingHorizontal: 19,
+  },
+  memoTitle: {
+    color: '#ffffff',
+    fontSize: 20,
+    lineHeight: 32,
+    fontWeight: 'bold',
+  },
+  memoDate: {
+    color: '#ffffff',
+    fontSize: 12,
+    lineHeight: 16,
+  },
+});
