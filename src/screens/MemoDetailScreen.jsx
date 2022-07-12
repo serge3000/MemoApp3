@@ -15,14 +15,14 @@ export default function MemoDetailScreen() {
         <Text style={styles.memoTitle}>買い物リスト</Text>
         <Text style={styles.memoDate}>2022年7月7日 20:44</Text>
       </View>
-      <ScrollView>
-        <Text>
+      <ScrollView style={styles.memoBody}>
+        <Text style={styles.memoText}>
           買い物リスト
           これはテストです七夕なので、願いを書きます。
           自分も含めてみんな笑顔で健康に、お金をたくさん稼げますように。
         </Text>
       </ScrollView>
-      <CircleButton>+</CircleButton>
+      <CircleButton style={{ top: 160, bottom: 'auto' }}>+</CircleButton>
     </View>
   );
 }
@@ -49,5 +49,13 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     fontSize: 12,
     lineHeight: 16,
+  },
+  memoBody: {
+    paddingVertical: 32,
+    paddingHorizontal: 27,
+  },
+  memoText: {
+    fontSize: 16,
+    lineHeight: 24,
   },
 });
