@@ -22,7 +22,7 @@ export default function MemoDetailScreen() {
           自分も含めてみんな笑顔で健康に、お金をたくさん稼げますように。
         </Text>
       </ScrollView>
-      <CircleButton style={{ top: 160, bottom: 'auto' }} name="edit-2" />
+      <CircleButton style={{ top: 160, bottom: 'auto' }} name="pencil" />
     </View>
   );
 }
