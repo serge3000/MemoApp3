@@ -1,14 +1,25 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { TouchableOpacity, Text, StyleSheet } from 'react-native';
+import { func, string } from 'prop-types';
 
-export default function Button() {
+export default function Button(props) {
+  const { label, onPress } = props;
   return (
-    <View style={styles.buttonContainer}>
-      <Text style={styles.buttonLabel}>Submit</Text>
-    </View>
+    <TouchableOpacity style={styles.buttonContainer} onPress={onPress}>
+      <Text style={styles.buttonLabel}>{label}</Text>
+    </TouchableOpacity>
   );
 }
+
+Button.propTypes = {
+  label: string.isRequired,
+  onPress: func,
+};
+
+Button.defaultProps = {
+  onPress: null,
+};
 
 const styles = StyleSheet.create({
   buttonContainer: {
