@@ -42,8 +42,9 @@ export default function MemoDetailScreen(props) {
       <ScrollView style={styles.memoBody}>
         <Text style={styles.memoText}>
           {memo && memo.bodyText}
-          買い物リスト
-          これはテストです七夕なので、願いを書きます。
+        </Text>
+        <Text style={styles.memoText}>
+          七夕なので、願いを書きます。
           自分も含めてみんな笑顔で健康に、お金をたくさん稼げますように。
         </Text>
       </ScrollView>
