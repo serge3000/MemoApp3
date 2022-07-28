@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import { LogBox } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator, CardStyleInterpolators } from '@react-navigation/stack';
 import firebase from 'firebase';
@@ -20,6 +21,9 @@ if (firebase.apps.length === 0) {
 }
 
 const Stack = createStackNavigator();
+LogBox.ignoreLogs(['EventEmitter.addListener']);
+LogBox.ignoreLogs(['ViewPropTypes']);
+LogBox.ignoreLogs(['AsyncStorage']);
 
 export default function App() {
   return (
